@@ -6,10 +6,10 @@
 
 /******* Coerción de datos (débilmente tipado)  */
 
-let a = "2",
+/* let a = "2",
   b = 5;
 console.log(typeof a + " " + typeof b); // string number
-console.log(a + b); // muestra 25
+console.log(a + b); // muestra 25 */
 
 /******* OJO con los boolean */
 
@@ -26,28 +26,28 @@ console.log(altura ? true : false); // Al estar definido, true. */
 
 /******* Declaración de funciones declaración */
 
-/* function doblar(num1) {
+function doblar(num1) {
   var res = num1 * 2;
   return `El resultado es ${res}`;
 }
 
-console.log(doblar(151)); */
+console.log(doblar(151));
 
 /******* Parámetros predeterminados */
 
-/* function saludar(persona = "Amigo") {
+function saludar(persona = "Amigo") {
   return `¡Hola ${persona}!`;
 }
 
-console.log(saludar()); */
+console.log(saludar());
 
 /******* Funciones como parámetro */
 
-/* function alpha(num, fun) {
+function alpha(num, fun) {
   return fun(num);
 }
 
-console.log(alpha(50, doblar)); */
+console.log(alpha(50, doblar));
 
 /******* Hoisting en funciones */
 
@@ -55,28 +55,28 @@ console.log(alpha(50, doblar)); */
 
 /******* Funciones anónimas (expresión) */
 
-/* const feo = function (num1, num2) {
+const feo = function (num1, num2) {
   return num1 + num2;
 };
 console.log(typeof feo);
 console.log(feo);
-console.log(feo(5, 7)); */
+console.log(feo(5, 7));
 
 //Se usan en la definición de métodos de los objetos.
 
 //Otro uso de la funciones anónimas (como parámetros)
 
-/* var beta = alpha(5, function (num) {
+var beta = alpha(5, function (num) {
   return num * 2;
 });
 
-console.log(`El valor de beta es ${beta}`); */
+console.log(`El valor de beta es ${beta}`);
 
 /******* Funciones flecha (usadas como callbacks, no como métodos) */
 
-/* const potencia = (num) => {
+const potencia = (num) => {
   return num ** 3;
-} */
+}
 
 /******* El pseudoarray (objeto iterable) arguments */
 
@@ -87,3 +87,8 @@ console.log(`El valor de beta es ${beta}`); */
   }
   return total;
 } */
+
+
+let cadena = new String();
+
+console.log(cadena);
