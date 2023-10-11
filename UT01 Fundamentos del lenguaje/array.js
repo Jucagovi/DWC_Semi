@@ -1,5 +1,44 @@
 "use strict";
 
+/*****  Objetos predefinidos. ********/
+
+/** Objeto window y algunos de sus métodos 
+
+  prompt      -> pedir datos al usuario/a.
+  setINterval -> repetir una acción cada cierto tiempo.
+  setTimeout  -> hacer una acción al transcurso de un tiempo.
+  
+*/
+
+/** setInetrval */
+//Se declaran variable globales.
+/* var total = 0;
+var intervalo;
+
+//Se crea la función a repetir.
+function sumar() {
+  let sumando = parseInt(
+    prompt("Dame un valor para sumar (o -1 para terminar): ")
+  );
+  if (sumando === -1) {
+    clearInterval(intervalo);
+    console.log(`Se ha terminado la ejecución con el resultado: ${total}.`);
+  } else {
+    console.log((total += sumando));
+  }
+}
+
+// Se lanza el intervalo.
+intervalo = setInterval(sumar, 5000); */
+
+/** setTimeout */
+
+/* function saludar() {
+  console.log(`¡Hola desde un setTimeout!.`);
+}
+
+console.log(setTimeout(saludar, 5000)); */
+
 /*****  Arrays. ********/
 
 /** Declaración.  */
@@ -41,6 +80,8 @@ map(función) 		    → ejecuta la función para cada elemento (devuelve).
 every(función) 		  → si la función se cumple siempre.
 some(función) 		  → si la función se cumple para alguno.
 filter(función) 		→ devuelve un nuevo array con elementos que cumplen la función.
+reduce(función)     → devuelve el valor de realizar un cálculo sobre los elementos del array.
+                      ¡¡OJO!! Recibe un parámetro más en su callback (acumulador, valor, óndoce, array).
 
 Los callbacks reciben tres parámetros opcionales en este orden:
   → el valor del elemento del array,
