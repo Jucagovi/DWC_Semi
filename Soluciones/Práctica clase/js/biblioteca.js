@@ -29,4 +29,26 @@ const mostrarDatos = (datos, donde) => {
   donde.innerHTML = cadena;
 };
 
-export { getDatos, mostrarDatos };
+const traerPeliculas = async (url, donde) => {
+  let texto = "<h3>Películas</h3>";
+  // Falta el control de errores.
+  const peliculas = await getDatos(url);
+  peliculas.map((pelicula, indice) => {
+    texto += `<p id=${indice + 1} class='pelicula'>${pelicula.title}</p>`;
+  });
+  donde.innerHTML = texto;
+};
+
+const traerPelicula = async (numero) => {
+  const datos = document.getElementsByClassName("informacion");
+  const url = `https://swapi.dev/api/films/${numero}`;
+  console.log(url);
+  const pelicula = await getDatos(url);
+  console.log(pelicula);
+  /* datos.innerHTML = `<h2>${pelicula.title}</h2>
+  <h3>${pelicula.director}</h3>
+  <h4>Productor${pelicula.productor}</h4>
+  <p>${pelicula.opening_crawl}</p>`; */
+};
+
+export { getDatos, mostrarDatos, traerPeliculas, traerPelicula };
