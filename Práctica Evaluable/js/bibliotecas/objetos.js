@@ -1,4 +1,5 @@
-// Objeto incial que debe ser cragado al iniciar la aplicación.
+// Array inicial para almacenar los objetos del tipo discente.
+// Este es el array que hay que modificar.
 
 let discentes = [
   {
